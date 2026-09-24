@@ -1,0 +1,78 @@
+:root {
+  // Colors
+  --color-bg: #E7DBC8;
+  --color-dark: #1B1B1B;
+  --color-black: #0B0D10;
+
+  --color-primary: #52BCAE;
+  --color-pink: #FF5368;
+  --color-yellow: #E3A100;
+
+  --color-white: #F2E1C8;
+  --color-grey: #9f9f9d;
+
+  --color-surface: #282828;
+  --color-border: #262B33;
+
+  // Couleurs d'accent des catégories
+  --color-cat-action: #F78D90;
+  --color-cat-comedy: #96DFB5;
+  --color-cat-drama: #E66EAE;
+  --color-cat-science-fiction: #46B5EE;
+  --color-cat-horror: #52BCAE;
+  --color-cat-animation: #F09F7A;
+  --color-cat-classics: #83CBC0;
+  --color-cat-cult: #F3D779;
+
+  // Typography
+  --font-base: recursive, georgia, serif;
+  --font-title: rubik, sans-serif;
+  --font-numbers: barrio, sans-serif;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  --line-height-base: 1.5;
+  --line-height-title: 1.05;
+
+  --fs-xs: 0.75rem;
+  --fs-s: 0.875rem;
+  --fs-base: 1rem;
+  --fs-m: 1.25rem;
+  --fs-l: 1.5rem;
+  --fs-xl: 2.5rem;
+  --fs-2xl: 3rem;
+  --fs-3xl: 3.5rem;
+  --fs-hero: clamp(3.625rem, 3.25rem + 1.5vw, 4.125rem);
+
+  // Spacing
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-s: 1rem;
+  --space-m: 1.5rem;
+  --space-l: 2rem;
+  --space-2l: 2.5rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+
+  // Layout
+  --page-max-width: 66.625rem;
+  --page-gutter: 1rem;
+
+  // Interaction
+  --focus-width: 3px;
+  --focus-offset: 3px;
+  --transition: 200ms ease;
+
+  // Borders
+  --border-thin: 1px;
+  --border-thick: 0.25rem;
+}
+
+// Breakpoints (media queries)
+$mob: 400px;
+$tablet: 768px;
+$desktop: 1024px;

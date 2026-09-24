@@ -1,0 +1,126 @@
+@use "mixins" as *;
+
+// Hero
+.hero {
+  --hero-tilt: -1.5deg;
+  --hero-overflow: var(--space-l);
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  justify-items: center;
+  gap: var(--space-m);
+  max-inline-size: 68rem;
+  margin-inline: auto;
+  margin-block: var(--space-s);
+  padding: var(--space-xl) var(--space-l) var(--space-l);
+  text-align: center;
+
+  // Bloc incliné
+  &::before {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    inset-inline: calc(var(--hero-overflow) * -1);
+    z-index: -1;
+    background: linear-gradient(180deg,rgba(110, 157, 149, 1) 0%, rgba(82, 188, 174, 1) 70%);
+    rotate: var(--hero-tilt);
+  }
+
+  @include tablet {
+    --hero-tilt: -1.25deg;
+    --hero-overflow: var(--space-m);
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    justify-items: start;
+    padding: var(--space-2xl) var(--space-xl) var(--space-xl);
+    text-align: start;
+  }
+
+  @include desktop {
+    padding-inline: 7.5rem;
+  }
+
+  &__content {
+    display: grid;
+    justify-items: center;
+    gap: var(--space-m);
+    inline-size: 100%;
+
+    @include tablet {
+      justify-items: start;
+    }
+  }
+
+  &__title {
+    color: var(--color-white);
+    font-size: var(--fs-hero);
+    font-weight: var(--fw-black);
+    line-height: 1;
+    text-shadow: 0 0.375rem 0 var(--color-black);
+
+    @include tablet {
+      max-inline-size: 32rem;
+      line-height: 0.8;
+    }
+  }
+
+  // "Deviens" seul sur la première ligne en mobile
+  &__title-start {
+    display: block;
+
+    @include tablet {
+      display: inline;
+    }
+  }
+
+  &__text {
+    max-inline-size: 18rem;
+
+    @include tablet {
+      max-inline-size: none;
+    }
+  }
+
+  // Une phrase par ligne à partir de la tablette
+  &__line {
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__button {
+    inline-size: 100%;
+    margin-block-start: var(--space-xs);
+    padding: var(--space-m) var(--space-s);
+    border: var(--border-thick) solid var(--color-black);
+    font-size: var(--fs-l);
+    font-weight: var(--fw-black);
+    background-color: var(--color-yellow);
+
+    @include tablet {
+      inline-size: min-content;
+      padding: var(--space-xs) var(--space-s);
+      line-height: 0.9;
+      text-align: start;
+    }
+  }
+
+  // Couronne décorative
+  &__visual {
+    order: -1;
+
+    @include tablet {
+      order: 0;
+      justify-self: end;
+      margin-block: calc(var(--space-xl) * -1);
+    }
+  }
+
+  &__image {
+    inline-size: 9rem;
+
+    @include tablet {
+      inline-size: 20rem;
+    }
+  }
+}

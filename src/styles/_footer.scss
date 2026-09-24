@@ -1,0 +1,84 @@
+@use "mixins" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  max-inline-size: var(--page-max-width);
+  margin: var(--space-3xs) auto 0;
+  padding: var(--space-l) var(--space-l) var(--space-xl);
+  background-color: var(--color-black);
+  color: var(--color-white);
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-l);
+    padding: var(--space-m);
+  }
+
+  &__brand {
+    order: 1;
+    display: grid;
+    justify-items: center;
+    gap: var(--space-2xs);
+
+    @include tablet {
+      order: 0;
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+  }
+
+  &__logo {
+    inline-size: auto;
+    block-size: 2rem;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+
+    @include tablet {
+      block-size: 1.5rem;
+    }
+  }
+
+  &__copyright {
+    font-size: var(--fs-xs);
+  }
+
+  &__socials {
+    @include tablet {
+      display: flex;
+      gap: var(--space-m);
+    }
+  }
+
+  &__social-item {
+    border-block-end: var(--border-thin) dotted var(--color-grey);
+
+    @include tablet {
+      border: 0;
+    }
+  }
+
+  &__social-link {
+    display: block;
+    padding-block: var(--space-m);
+    font-weight: var(--fw-medium);
+    transition: color var(--transition);
+
+    @include tablet {
+      padding-block: var(--space-2xs);
+      font-size: var(--fs-s);
+    }
+
+    &:hover {
+      color: var(--color-pink);
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}

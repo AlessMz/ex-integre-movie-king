@@ -1,0 +1,97 @@
+@use "mixins" as *;
+
+.how-to-play {
+  display: grid;
+  gap: var(--space-l);
+  max-inline-size: var(--page-max-width);
+  margin-inline: auto;
+  padding: var(--space-xl) var(--space-l);
+  background-color: var(--color-dark);
+  color: var(--color-white);
+
+  @include tablet {
+    padding: var(--space-2l) var(--space-2xl) var(--space-2xl);
+  }
+
+  &__crown {
+    display: none;
+
+    @include tablet {
+      display: block;
+      grid-area: 1 / 1;
+      justify-self: end;
+      inline-size: 2.25rem;
+      margin-inline-end: calc(var(--space-2xs) * -1);
+    }
+  }
+}
+
+.section-head {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: end;
+
+  &__eyebrow {
+    grid-area: 1 / 1;
+    color: var(--color-pink);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-black);
+    line-height: var(--line-height-title);
+
+    @include tablet {
+      grid-column: 1;
+      font-size: var(--fs-xl);
+    }
+  }
+
+  &__text {
+    grid-column: 1 / -1;
+    margin-block-start: var(--space-2xs);
+  }
+}
+
+.steps {
+  display: grid;
+  gap: var(--space-m);
+  counter-reset: step;
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: var(--space-m);
+    row-gap: var(--space-s);
+    padding-block: var(--space-s) var(--space-m);
+    border-block: var(--border-thin) dotted var(--color-grey);
+    counter-increment: step;
+
+    &::before {
+      content: counter(step);
+      color: var(--color-pink);
+      font-family: var(--font-numbers);
+      font-size: var(--fs-2xl);
+      line-height: 1;
+    }
+  }
+
+  &__title {
+    font-size: var(--fs-l);
+    font-weight: var(--fw-bold);
+  }
+
+  &__text {
+    grid-column: 1 / -1;
+    font-size: var(--fs-s);
+  }
+}
