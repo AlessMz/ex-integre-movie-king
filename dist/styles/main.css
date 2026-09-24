@@ -550,6 +550,12 @@ abbr[title] {
     text-align: start;
   }
 }
+.hero__button:hover {
+  filter: brightness(1.1);
+}
+.hero__button:active {
+  filter: brightness(0.95);
+}
 .hero__visual {
   order: -1;
 }

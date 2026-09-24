@@ -103,6 +103,13 @@
       line-height: 0.9;
       text-align: start;
     }
+    &:hover {
+      filter: brightness(1.1);
+    }
+
+    &:active {
+      filter: brightness(0.95);
+    }
   }
 
   // Couronne décorative
