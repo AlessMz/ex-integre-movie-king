@@ -17,6 +17,7 @@
 
   @include tablet {
     --logo-height: 4.5rem;
+    position: static;
     grid-template-columns: 1fr auto 1fr;
     padding-block: var(--space-xl) var(--space-l);
     padding-inline: var(--space-xl);
