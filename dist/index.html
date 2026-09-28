@@ -16,7 +16,7 @@
   <header class="header">
     <a class="header__logo" href="index.html">
       <picture>
-        <source srcset="images/logo/logo-full.svg">
+        <source media="(min-width: 768px)" srcset="images/logo/logo-full.svg">
         <img class="header__logo-image" src="images/logo/logo-mk.svg" alt="Movie Kings, accueil">
       </picture>
     </a>
@@ -35,7 +35,7 @@
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#jouer">
+          <a class="nav__link" href="jouer.html">
             <img class="nav__icon" src="images/icons/nav-play.svg" alt="">
             Jouer
           </a>
@@ -140,13 +140,7 @@
               aria-hidden="true">→</span></strong>
         </p>
 
-        <details class="quote-card__reveal">
-          <summary class="button button--primary quote-card__toggle">Révéler la réponse</summary>
-          <p class="quote-card__answer">
-            <cite class="quote-card__film">Les Dents de la mer</cite>
-            <span class="quote-card__meta">Steven Spielberg, 1975</span>
-          </p>
-        </details>
+        <a href="#" class="quote-card__toggle">Révéler la réponse</a>
       </div>
     </section>
 
@@ -222,6 +216,10 @@
       </ul>
     </section>
 
+    <aside class="ad" aria-label="Publicité">
+      <p class="ad__label">Zone de l'annonceur</p>
+    </aside>
+
   </main>
 
   <!-- Footer -->
@@ -256,5 +254,4 @@
   </footer>
 
 </body>
-
 </html>

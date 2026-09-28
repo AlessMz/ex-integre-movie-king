@@ -1,0 +1,15 @@
+@use "mixins" as *;
+
+.ad {
+  display: grid;
+  place-items: center;
+  max-inline-size: var(--page-max-width);
+  min-block-size: 32rem;
+  margin: 0 auto;
+  background-color: var(--color-dark);
+  &__label {
+    color: var(--color-dark-grey);
+    font-size: var(--fs-xl);
+    font-style: italic;
+  }
+}

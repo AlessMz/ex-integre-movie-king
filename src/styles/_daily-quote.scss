@@ -145,10 +145,6 @@
     list-style: none;
     transition: filter var(--transition);
 
-    &::-webkit-details-marker {
-      display: none;
-    }
-
     &:hover {
       filter: brightness(1.1);
     }
@@ -156,22 +152,5 @@
     &:active {
       filter: brightness(0.95);
     }
-  }
-
-  &__answer {
-    display: grid;
-    margin-block-start: var(--space-s);
-    text-align: center;
-  }
-
-  &__film {
-    font-size: var(--fs-m);
-    font-style: normal;
-    font-weight: var(--fw-bold);
-  }
-
-  &__meta {
-    color: var(--color-grey);
-    font-size: var(--fs-s);
   }
 }
