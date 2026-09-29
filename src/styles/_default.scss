@@ -32,8 +32,7 @@ p {
   overflow-wrap: break-word;
 }
 
-ul[class],
-ol[class] {
+:where(ul[class], ol[class]) {
   padding: 0;
   list-style: none;
 }
@@ -51,6 +50,7 @@ abbr[title] {
   text-decoration: none;
 }
 
+/* page jouer */
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -58,4 +58,19 @@ abbr[title] {
   overflow: hidden;
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+fieldset {
+  min-inline-size: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+[hidden] {
+  display: none;
 }
